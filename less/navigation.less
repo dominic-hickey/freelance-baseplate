@@ -1,0 +1,151 @@
+// -------------------------------------
+// Template: LESS > Navigation
+// -------------------------------------
+
+
+
+
+// Template Navigation
+// ------------------------------
+
+
+.template-nav {
+
+	// Open (Fullscreen)
+	&.open {
+	}
+}
+
+
+
+
+// Nav List
+// ------------------------------
+
+
+.nav-list {
+	.flex-display;
+	.justify-content(space-between);
+}
+
+
+
+
+// Nav Item
+// ------------------------------
+
+
+.nav-item {
+    display: inline-block;
+    padding: 0 30px;
+
+	@media @tablet {
+		padding: 0 20px;
+    }
+}
+
+
+
+
+// Nav Link
+// ------------------------------
+
+
+.nav-link {
+    .transition(.8s);
+
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 32px;
+    color: @color__navigation--text;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+	-moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    &:hover,
+    &--selected {
+        color: black;
+    }
+}
+
+
+
+
+// Nav Icon
+// ------------------------------
+
+
+.nav-toggle {
+	position: absolute;
+	top: 17px;
+	right: 30px;
+	z-index: 10001;
+	width: 42px;
+	height: 47px;
+	margin-left: auto;
+	padding: 22px 10px;
+	display: none;
+	background-clip: content-box;
+	background-color: @color__primary;
+	overflow: hidden;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+
+	@media @tablet {
+		display: block;
+		right: 14px;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	// Top and bottom navigation item bar
+	&:after,
+	&:before {
+		content: "";
+		height: 3px;
+		width: 27px;
+		position: absolute;
+		left: 5px;
+		display: block;
+		background-color: @color__primary;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	// Top bar
+	&:before {
+		top: 13px;
+	}
+
+	// Bottom bar
+	&:after {
+		bottom: 13px;
+	}
+
+	// Open Nav Icon
+	.open & {
+		background-color: transparent;
+
+		&:before {
+			top: 21px;
+			-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg); -ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		&:after {
+			bottom: 23px;
+			-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}

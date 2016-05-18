@@ -1,0 +1,154 @@
+// -------------------------------------
+// Template: Stylesheet
+// -------------------------------------
+
+
+#tdk-toolbar {
+    display: none!important;
+}
+
+@templateCommon: "../../templates/common/";
+@templateLocal: "";
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Imports
+//  #Site Styles
+//  #Header
+//  #Footer
+//  #Global Sections
+//  #Sections
+
+
+
+
+// -----------------------------
+// #Imports
+// -----------------------------
+
+
+@import "@{templateLocal}/less/reset.less";       // Reset
+@import "@{templateLocal}/less/variables.less";   // Variables
+@import "@{templateLocal}/less/typography.less";  // Typography
+@import "@{templateLocal}/less/mixins.less";      // Mixins
+@import "@{templateLocal}/less/forms.less";		  // Forms
+@import "@{templateLocal}/less/layout.less";  	  // Layout
+
+@import "@{templateLocal}/less/navigation.less";  // Navigation
+@import "@{templateLocal}/less/hero.less";		  // Hero
+
+@import "@{templateLocal}/less/page--home.less";  // Home Page
+
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+body {
+    background-color: @color__body--background;
+    font-family: "Playfair Display", sans-serif;
+}
+
+
+// Site Container
+.site-container {
+    .flex-display;
+    .flex-direction(column);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: @color__site-container--background;
+}
+
+// Container
+.container {
+    width: 90%;
+    max-width: @value__content-container--width;
+    margin: 0 auto;
+}
+
+// Main
+.main-content {
+    position: relative;
+}
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+
+.template-header {
+
+}
+
+
+
+
+// Logo
+// ------------------------------
+
+
+// Logo
+.logo {
+	
+}
+
+
+// Logo Link
+.logo-link {
+
+}
+
+
+
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+
+.template-footer {
+    
+}
+
+
+
+
+// ------------------------------
+// #Global Sections
+// ------------------------------
+
+
+// Styles go here...
+
+
+
+
+// ------------------------------
+// #Sections
+// ------------------------------
+
+
+.section {
+	display: inline-block;
+	width: 100%;
+    padding: @value__row--spacing--desktop 0;
+
+    @media @tablet {
+        padding: @value__row--spacing--tablet 0;
+    }
+    @media @mobile {
+        padding: @value__row--spacing--mobile 0;
+    }
+
+}

@@ -1,0 +1,48 @@
+// ----------------------------------------
+// Template: LESS > Layout
+// ----------------------------------------
+
+
+
+
+// Row
+// -----------------------------
+
+
+.row {
+	.flex-display;
+	.flex-wrap(wrap);
+}
+
+
+
+
+// Columns
+// -----------------------------
+
+
+.col {
+
+	// Column: Third
+	&--half {
+		.flex-basis(50%);
+
+		@media @tablet {
+			.flex-basis(100%);
+		}
+	}
+
+	// Column: Third
+	&--third {
+		.flex-basis(33.333%);
+
+		@media @tablet {
+			.flex-basis(50%);
+		}
+	}
+
+	@media @mobile {
+		.flex-basis(100%);
+	}
+
+}

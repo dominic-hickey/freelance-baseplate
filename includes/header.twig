@@ -1,0 +1,29 @@
+<!-- Header -->
+<header class="template-header">
+
+	<!-- Logo -->
+	<div class="logo">
+		<a href="/" class="logo-link">
+			<img src="{{asset('/images/logo.svg')}}" alt="Logo">
+		</a>
+	</div>
+
+	<!-- Navigation -->
+    <nav class="template-nav">
+
+    	<button class="nav-toggle"></button>
+
+		<ul class="nav-list">
+			<li class="nav-item">
+				<a href="/" class="nav-link  {% if page.title == "" %}  nav-link--selected{% endif %}">Page 1</a>
+			</li>
+			<li class="nav-item">
+				<a href="/" class="nav-link  {% if page.title == "" %}  nav-link--selected{% endif %}">Page 2</a>
+			</li>
+			<li class="nav-item">
+				<a href="/" class="nav-link  {% if page.title == "" %}  nav-link--selected{% endif %}">Page 3</a>
+			</li>
+		</ul>
+	</nav>
+
+</header>

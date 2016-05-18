@@ -1,0 +1,124 @@
+// -------------------------------------
+// JadeKeys: LESS > Typography
+// -------------------------------------
+
+
+
+// #Google Font Imports
+// -----------------------------
+
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700,400|Montserrat:400,700);
+
+
+
+
+// #General Typography
+// -----------------------------
+
+
+h1, h2, h3, h4, p {
+	margin: 0;
+	padding-bottom: 10px;
+	font-family: "Playfair Display", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+h1, .heading--1 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 40px;
+	color: @color__heading--text;
+
+	@media @bp-1024 {
+		font-size: 30px;
+		line-height: 32px;
+	}
+}
+
+h2, .heading--2 {
+	position: relative;
+	padding-bottom: 40px;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 36px;
+	color: @color__heading--text;
+}
+
+h3, .heading--3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	color: @color__heading--text;
+}
+
+h4, .heading--4 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #B5B5B5;
+}
+
+p,
+.paragraph {
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 400;
+	color: @color__p--text;
+}
+
+
+
+
+// #Global Link
+// -----------------------------
+
+
+a {
+	.transition(.3s);
+	color: @color__link--text;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+
+// #Buttons
+// -----------------------------
+
+
+.button {
+	display: inline-block;
+	padding: 6px 20px;
+	.transition(.6s);
+	background-color: @color__primary;
+
+	font-family: "Montserrat", sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 32px;
+	color: #fff;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0px rgba(41, 38, 42, 0.3);
+
+	&:focus,
+	&:active {
+		box-shadow: inset 0 1px 3px rgba(150, 64, 48, 0.8);
+	}
+
+	&:hover {
+		background-color: darken(@color__primary, 6%);
+	}
+}
